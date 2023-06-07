@@ -13,7 +13,7 @@ function abrir_pregunta(numero) {
 //temporizador
 //!(fecha temporal)
 const fecha_final = {
-    dia: 23,
+    dia: 25,
     hora: 0,
     minuto: 0,
     segundo: 0,
@@ -157,23 +157,26 @@ function abir_datos() {
 }
 //introducir codigo
 //abrir/cerrar
-function abrir_introducir_codigo() {
-    document.getElementById("alinear-div-introducir-codigo").style.display = "flex"
-}
-function cerrar_introducir_codigo() {
-    document.getElementById("alinear-div-introducir-codigo").style.display = "none"
-}
-
-//comprobar
-function comprobar_codigo_introducido() {
-    const codigo_introducido = document.getElementById("bt-introducir-codigo").value.toLocaleLowerCase();
-    //comprobar caracteres
-    if (codigo_introducido!="") {
-        if ((codigo_introducido.length == 4) && !isNaN(Number(codigo_introducido[0] + codigo_introducido[1] + codigo_introducido[2])) && (isNaN(Number(codigo_introducido[3])))) {//correcto
-
-        }
-        else {//incorrecto
-            alert("Codigo introducido invalido. Estructura NNNL (Ex. 458M)")
-        }
+function abrir_cerra_introducir_codigo(realizar) {
+    if (!realizar) {//abrir
+        document.getElementById("alinear-div-introducir-codigo").style.display = "flex"
+    }
+    else {//cerrar
+        document.getElementById("alinear-div-introducir-codigo").style.display = "none"
     }
 }
+
+//votaciones realizadas historial
+function mostrar_historial_usuario_votaciones(historial_recibido) {
+    //cerrar todas las pestañas
+    preguntas = [false, false]
+    document.getElementById('pregunta-0').style.display = "none"
+    document.getElementById('pregunta-1').style.display = "none"
+    document.getElementById("div-alinear-pagina-historial-votaciones").style.display = "flex";
+    //actualizar datos en pantalla
+        //null->no mostrar
+        //!null->mostrar categoria y a quien voto (nombre y clase; maximo 2 por categoria)
+        
+}
+
+

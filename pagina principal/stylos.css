@@ -286,6 +286,7 @@ body {
     height: 40px;
     width: 40px;
     cursor: pointer;
+    user-select: none;
 }
 
 .alinear-div-datos-votaciones {

@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Votaciones 4º</title>
     <link rel="stylesheet" href="stylos.css">
-    <script src="pagina_inicio.js"></script>
+    <script src="pagina_inicio_interacciones.js"></script>
+    <script src="scripts.js"></script>
 </head>
 
 <body onload="calcular_cuenta_atras()">
@@ -49,7 +50,7 @@
     </div>
     <!--bt votar-->
     <div class="alinear-bt-votar">
-        <div class="bt-votar" onclick="abrir_introducir_codigo()"><span>¡Teu voto conta!</span></div>
+        <div class="bt-votar" onclick="abrir_cerra_introducir_codigo(false)"><span>¡Teu voto conta!</span></div>
     </div>
     <!--datos votaciones-->
     <div class="alinear-img-flip-flop-datos-votaciones">
@@ -77,14 +78,23 @@
     <div id="alinear-div-introducir-codigo">
         <div class="div-introducir-codigo">
             <img draggable="false" class="bt-cerrar-div-introducir-codigo" alt="" src="cruz_roja.svg"
-                onclick="cerrar_introducir_codigo()">
+                onclick="abrir_cerra_introducir_codigo(true)">
             <h3 class="text-introducir-codigo">Codigo de participante</h3>
             <div class="alinear-bt-introducir-codigo">
                 <input type="text" id="bt-introducir-codigo" placeholder="Codigo..." value="">
             </div>
             <div class="alinear-bt-comprobar">
-                <input type="button" class="bt-comprobar-codigo" value="Iniciar" onclick="comprobar_codigo_introducido()">
+                <input type="button" class="bt-comprobar-codigo" value="Iniciar"
+                    onclick="comprobar_codigo_introducido()">
             </div>
+        </div>
+    </div>
+    <!--pagina de hostorial de votaciones del usuario-->
+    <div id="div-alinear-pagina-historial-votaciones">
+        <div class="div-pagina-historial">
+            <h3 class="text-historial-usuario-votaciones">Historial de votos realizados</h3>
+            <div id="div-text-resultados-historial"></div>
+            <input type="button" value="Continuar" class="bt-continuar-historial-votar" onclick="">
         </div>
     </div>
 </body>
