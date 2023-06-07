@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votaciones 4º</title>
+    <link rel="stylesheet" href="stylos.css">
+    <script src="pagina_inicio.js"></script>
+</head>
+
+<body onload="calcular_cuenta_atras()">
+    <!--Centro-->
+    <div class="intituto-text">
+        <a draggable="false" style=" text-decoration: none;color: #2f1c6a;"
+            href="https://www.edu.xunta.gal/centros/iesxulianmagarinos/">IES Xulian Magariños</a>
+    </div>
+    <!--Creador-->
+    <div class="creador-text">Mateo González</div>
+    <!--titulo-->
+    <div class="titulo-pagina">¡Vota Xa!</div>
+    <!--Cambiar idioma pagina-->
+    <div class="idioma-pagina">Galego</div>
+    <!--Informacion pagina-->
+    <div class="div-preguntas">
+        <!--p1-->
+        <div class="div-pregunta" style="    border-bottom:none;">
+            <div class="pregunta" onclick="abrir_pregunta(0)">¿De que trata a votacion?</div>
+            <div class="respuesta" id="pregunta-0">Trátase dunha simple votación feita para eloxiar o traballo realizado
+                polo alumnado
+                de 4º da eso do <a draggable="false" style=" text-decoration: none;color: #2b3ccd;cursor: poiFnter;"
+                    href="https://www.edu.xunta.gal/centros/iesxulianmagarinos/">IES Xulian Magariños.</a></div>
+        </div>
+        <!--p2-->
+        <div class="div-pregunta">
+            <div class="pregunta" onclick="abrir_pregunta(1)">¿Cales son as razóns que levaron á creación desta páxina?
+            </div>
+            <div class="respuesta" id="pregunta-1">Máis alo dun motivo didáctico foi creada para divertirse e disfrutar
+                deste derradeiro
+                curso antes de facernos totalmente responsábeis do noso grandioso futuro.</div>
+        </div>
+    </div>
+    <!--Tiempo restante-->
+    <div class="alinear-temporizador">
+        <div id="barra-progreso-temporizador">
+            <div id="temporizador">00 : 00 : 00 : 00</div>
+        </div>
+    </div>
+    <!--bt votar-->
+    <div class="alinear-bt-votar">
+        <div class="bt-votar" onclick="abrir_introducir_codigo()"><span>¡Teu voto conta!</span></div>
+    </div>
+    <!--datos votaciones-->
+    <div class="alinear-img-flip-flop-datos-votaciones">
+        <img draggable="false" id="img-flip-flop-datos-votaciones" onclick="abir_datos()" alt=""
+            src="archivo_cerrado.svg">
+    </div>
+    <div class="alinear-div-datos-votaciones">
+        <div id="div-datos-votaciones">
+            <span>Votos totales: <font>0</font></span>
+            <span>Participantes totales: <font>0</font></span>
+            <span>Categorias totales: <font>5</font></br>
+                <span>·Categoria 1º: V(<font>0</font>) , P(<font>0</font>)</span>
+                </br>
+                <span>·Categoria 2º: V(<font>0</font>) , P(<font>0</font>)</span>
+                </br>
+                <span>·Categoria 3º: V(<font>0</font>) , P(<font>0</font>)</span>
+                </br>
+                <span>·Categoria 4º: V(<font>0</font>) , P(<font>0</font>)</span>
+                </br>
+                <span>·Categoria 5º: V(<font>0</font>) , P(<font>0</font>)</span>
+            </span>
+        </div>
+    </div>
+    <!--introducir codigo-->
+    <div id="alinear-div-introducir-codigo">
+        <div class="div-introducir-codigo">
+            <img draggable="false" class="bt-cerrar-div-introducir-codigo" alt="" src="cruz_roja.svg"
+                onclick="cerrar_introducir_codigo()">
+            <h3 class="text-introducir-codigo">Codigo de participante</h3>
+            <div class="alinear-bt-introducir-codigo">
+                <input type="text" id="bt-introducir-codigo" placeholder="Codigo..." value="">
+            </div>
+            <div class="alinear-bt-comprobar">
+                <input type="button" class="bt-comprobar-codigo" value="Iniciar" onclick="comprobar_codigo_introducido()">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
