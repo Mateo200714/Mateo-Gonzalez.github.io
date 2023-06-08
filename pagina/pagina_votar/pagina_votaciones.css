@@ -1,0 +1,257 @@
+/* fuentes de texto */
+
+body {
+    overflow: hidden;
+}
+
+.bt-volver-pagina-principal {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 55px;
+    width: 55px;
+    cursor: pointer;
+    z-index: 1;
+    user-select: none;
+}
+
+#text-categoria-mostrar {
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #313cdb;
+    user-select: none;
+}
+
+#text-categoria-mostrar font {
+    transition: 0.8s;
+    padding-left: 15px;
+    color: #6a39e5;
+}
+
+#text-categoria-mostrar font:hover {
+    transition: 0.5s;
+    padding-left: 15px;
+    color: #eec935;
+}
+
+.bt-cambiar-retroceder-categoria {
+    position: absolute;
+    top: calc(50% - 27px);
+    left: 0px;
+    height: 55px;
+    width: 55px;
+    cursor: pointer;
+    fill: #313cdb;
+}
+
+.bt-cambiar-siguiente-categoria {
+    transform: rotate(180deg);
+    position: absolute;
+    top: calc(50% - 27px);
+    right: 0px;
+    height: 55px;
+    width: 55px;
+    cursor: pointer;
+    fill: #313cdb;
+}
+
+/* bt votos */
+.alinear-bts-votos-categoria {
+    position: absolute;
+    top: 80px;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bt-voto-categoria {
+    transition: 1s;
+    position: relative;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: arial, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1.1px;
+    border-radius: 4px;
+    border: 1px outset #14947d;
+    color: #ffd24c;
+    background-color: #10b597;
+    cursor: pointer;
+    user-select: none;
+}
+
+.bt-voto-categoria:focus {
+    transition: 0.6s;
+    border: 1px inset #14947d;
+    color: #ff7e22;
+    background-color: #94dfd2;
+}
+
+/* datos candidato */
+#alinear-div-datos-candidato-seleccionado {
+    position: absolute;
+    top: 145px;
+    left: 0%;
+    width: 100%;
+    height: calc(100% - 35% - 130px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-datos-candidato-votar {
+    position: relative;
+    width: 350px;
+    height: 215px;
+}
+
+.text-nombre-datos-candidato-votar {
+    position: relative;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #313cdb;
+}
+
+.text-clase-datos-candidato-votar {
+    position: relative;
+    margin-top: 4px;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #313cdb;
+}
+
+.text-descripcion-datos-candidato-votar {
+    position: relative;
+    width: 450px;
+    height: 65px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.55px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #313cdb;
+}
+
+.bt-votar-datos-candidato-votar {
+    transition: 1s;
+    position: relative;
+    top: 5px;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: arial, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1.1px;
+    border-radius: 4px;
+    border: 1px outset #14947d;
+    color: #ffd24c;
+    background-color: #106db5;
+    cursor: pointer;
+    user-select: none;
+}
+
+.bt-votar-datos-candidato-votar:focus {
+    border: 1px inset #948114;
+    color: #ff910097;
+    background-color: #d4ecff;
+}
+
+/* candidatos votar */
+#alinear-div-candidatos-votar {
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: calc(35% - 15px);
+    box-shadow: 0px 0px 3px #b8b8b8;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* todos candidatos seleccioanr */
+.div-clase-separacion-candidatos {
+    position: relative;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    user-select: none;
+}
+
+.text-clase-candidatos-separacion {
+    position: relative;
+    top: 0px;
+    left: 0%;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    padding-left: 25px;
+    text-overflow: ellipsis;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #313cdb;
+}
+
+.div-candidato {
+    float: left;
+    position: relative;
+    left: 8px;
+    height: 125px;
+    width: 120px;
+    margin-right: 8px;
+    background-color: #edf0f0;
+    cursor: pointer;
+    margin-top: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 3px #b1b1b1;
+}
+
+.img-candidato {
+    position: relative;
+    height: 90px;
+    width: 120px;
+}
+
+.nombre-candidato {
+    position: relative;
+    width:calc( 100% - 8px);
+    left: 4px;
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: 'Noto Sans', sans-serif;
+    color: #313cdb;
+}

@@ -146,11 +146,11 @@ function calcular_cuenta_atras() {
 let datos_abiertos = false;
 function abir_datos() {
     if (!datos_abiertos) {
-        document.getElementById("img-flip-flop-datos-votaciones").src = "archivo_abierto.svg"
+        document.getElementById("img-flip-flop-datos-votaciones").src = "/pagina/assets/archivo_abierto.svg"
         document.getElementById("div-datos-votaciones").style.display = "flex";
     }
     else {
-        document.getElementById("img-flip-flop-datos-votaciones").src = "archivo_cerrado.svg"
+        document.getElementById("img-flip-flop-datos-votaciones").src = "/pagina/assets/archivo_cerrado.svg"
         document.getElementById("div-datos-votaciones").style.display = "none";
     }
     datos_abiertos = !datos_abiertos
@@ -166,7 +166,7 @@ function abrir_cerra_introducir_codigo(realizar) {
     }
 }
 
-//votaciones realizadas historial
+//historial votaciones realizadas 
 function cerrar_historial_votos(){
     document.getElementById("div-alinear-pagina-historial-votaciones").style.display="none"
 }
@@ -199,5 +199,10 @@ function mostrar_historial_usuario_votaciones(historial_recibido, datos_particip
     //mostrar resultados
     document.getElementById("div-text-resultados-historial").innerHTML = codigo_resultante
 }
-
-
+function continuar_historial_votacion(){
+    window.location.href = "/pagina/pagina_votar/pagina_votaciones.html";
+}
+//votar categorias
+function mostrar_votar_categoria(){
+    
+}
