@@ -143,9 +143,9 @@ function calcular_cuenta_atras() {
     }, 1000)//1 s
 }
 //abrir datos
-let abierto = false;
+let datos_abiertos = false;
 function abir_datos() {
-    if (!abierto) {
+    if (!datos_abiertos) {
         document.getElementById("img-flip-flop-datos-votaciones").src = "archivo_abierto.svg"
         document.getElementById("div-datos-votaciones").style.display = "flex";
     }
@@ -153,7 +153,7 @@ function abir_datos() {
         document.getElementById("img-flip-flop-datos-votaciones").src = "archivo_cerrado.svg"
         document.getElementById("div-datos-votaciones").style.display = "none";
     }
-    abierto = !abierto
+    datos_abiertos = !datos_abiertos
 }
 //introducir codigo
 //abrir/cerrar
@@ -167,16 +167,37 @@ function abrir_cerra_introducir_codigo(realizar) {
 }
 
 //votaciones realizadas historial
-function mostrar_historial_usuario_votaciones(historial_recibido) {
+function cerrar_historial_votos(){
+    document.getElementById("div-alinear-pagina-historial-votaciones").style.display="none"
+}
+function mostrar_historial_usuario_votaciones(historial_recibido, datos_participantes_recibido, categorias_votaciones_recibido) {
     //cerrar todas las pestañas
     preguntas = [false, false]
     document.getElementById('pregunta-0').style.display = "none"
     document.getElementById('pregunta-1').style.display = "none"
+    document.getElementById("div-datos-votaciones").style.display = "none";
+    datos_abiertos = false;
+    abrir_cerra_introducir_codigo(true)
+
     document.getElementById("div-alinear-pagina-historial-votaciones").style.display = "flex";
     //actualizar datos en pantalla
-        //null->no mostrar
-        //!null->mostrar categoria y a quien voto (nombre y clase; maximo 2 por categoria)
-        
+    //!null->mostrar categoria y a quien voto (nombre y clase; maximo 2 por categoria)
+
+    //recoger los votos realizados de cada categoria
+    let votos_realizados_mostrar = historial_recibido.map(votos_categoria => votos_categoria.filter(voto => voto !== null)).filter(votos_categoria => votos_categoria.length > 0);
+
+    //combertir datos en HTML-> categoria <div></div> , voto <span>Nombre  Clase</span>
+    let codigo_resultante = "";
+    for (let i = 0; i < votos_realizados_mostrar.length; i++) {
+        codigo_resultante += "<div class='div-categoria-historial-votos'><h4 class='text-categoria-historial'>Categoria: " + categorias_votaciones_recibido[i] + "</h4>"
+        for (let j = 0; j < votos_realizados_mostrar[i].length; j++) {
+            const datos_votado = datos_participantes_recibido.find(e => e.id === votos_realizados_mostrar[i][j])
+            codigo_resultante += `<span>${datos_votado.nombre}<font>${datos_votado.clase}</font></span></br>`
+        }
+        codigo_resultante += "</div>"
+    }
+    //mostrar resultados
+    document.getElementById("div-text-resultados-historial").innerHTML = codigo_resultante
 }
 
 

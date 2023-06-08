@@ -1,6 +1,7 @@
 /* fuentes de texto */
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 body {
     background-color: #ffffff;
@@ -385,12 +386,12 @@ body {
     font-size: 17.5px;
     letter-spacing: 0.85px;
     font-weight: 600;
-    color:#8e3fee;
+    color: #8e3fee;
 }
 
 .alinear-bt-introducir-codigo {
     position: absolute;
-    top:calc( 40% - 10px);
+    top: calc(40% - 10px);
     left: 0%;
     width: 100%;
     display: flex;
@@ -411,7 +412,7 @@ body {
     background-color: #ffeadb;
     box-shadow: 0px 0px 3px #e7cbb7;
     border: 1px solid #fbe1cf;
-    border-radius:5px;
+    border-radius: 5px;
 }
 
 .alinear-bt-comprobar {
@@ -449,4 +450,130 @@ body {
     border: 1px solid #53ffe5;
     color: #fe2b8d;
     background-color: #dcf3fa;
+}
+
+/* historial */
+#div-alinear-pagina-historial-votaciones {
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    z-index: 100;
+}
+
+.div-pagina-historial {
+    position: relative;
+    width: 325px;
+    height: 320px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    background: #fbfbfb;
+    box-shadow: 0px 0px 3px #d3d3d3;
+    border-radius: 3px;
+}
+
+.bt-cerrar-div-continuar-votar {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 2 !important;
+    user-select: none;
+}
+
+.text-historial-usuario-votaciones {
+    margin: 0;
+    position: absolute;
+    top: 38px;
+    left: 0%;
+    width: 100%;
+    height: 24px;
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    color: #3d48e6;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.45px;
+}
+
+#div-text-resultados-historial {
+    position: absolute;
+    top: 75px;
+    left: 0%;
+    width: 100%;
+    height: calc(100% - 120px);
+    overflow-x: hidden;
+}
+
+.alinear-bt-continuar-historial-votar {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bt-continuar-historial-votar {
+    transition: 1s;
+    position: relative;
+    width: 125px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: arial, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1.1px;
+    border-radius: 4px;
+    border: 1px solid #ffda6c;
+    background-color: #ff8153;
+    color: #ffd453;
+    cursor: pointer;
+    user-select: none;
+}
+
+.bt-continuar-historial-votar:hover {
+    transition: 0.8s;
+    border: 1px solid #ff8153;
+    color: #fe2b86;
+    background-color: #ffe7cc;
+}
+
+.div-categoria-historial-votos {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.text-categoria-historial {
+    margin: 0;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.div-categoria-historial-votos span {
+    margin: 0;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.div-categoria-historial-votos font {
+    padding-left: 12px;
 }
