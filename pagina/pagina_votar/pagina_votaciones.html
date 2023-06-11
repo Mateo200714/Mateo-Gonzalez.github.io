@@ -8,7 +8,8 @@
     <title>Votaciones 4º Categorías</title>
     <link rel="stylesheet" href="./pagina_votaciones.css">
     <script src="./pagina_votaciones_interacciones.js"></script>
-    <script src="/pagina/scripts.js"></script>
+    <script src="/pagina/datos.js"></script>
+    <script src="scripts.js"></script>
 </head>
 
 <body>
@@ -16,65 +17,29 @@
     <img draggable="false" src="/pagina/assets/flecha_volver.svg" alt="" class="bt-volver-pagina-principal"
         onclick="volver_pagina_inicio()">
     <!--nombre categoria-->
-    <h3 id="text-categoria-mostrar">Categoria:<font>Amable</font>
-    </h3>
+    <h3 id="text-categoria-mostrar">Categoria:<font>Amable</font></h3>
     <!--bt votos categoria-->
     <div class="alinear-bts-votos-categoria">
-        <input type="button" class="bt-voto-categoria" value="Voto 1"
-            style="    border-top-right-radius: 0px;border-bottom-right-radius: 0px;" onclick="">
-        <input type="button" class="bt-voto-categoria" value="Voto 2"
-            style="    border-top-left-radius: 0px;border-bottom-left-radius: 0px;" onclick="">
+        <input type="button" class="bt-voto-categoria seleccionado" id="bt-voto-categoria-1" value="Voto 1"
+            style="    border-top-right-radius: 0px;border-bottom-right-radius: 0px;"
+            onclick="cambiar_numero_voto_seleccionado(1)">
+        <input type="button" class="bt-voto-categoria" id="bt-voto-categoria-2" value="Voto 2"
+            style="    border-top-left-radius: 0px;border-bottom-left-radius: 0px;"
+            onclick="cambiar_numero_voto_seleccionado(2)">
     </div>
     <!--datos mostrados candidato seleccionado-->
     <div id="alinear-div-datos-candidato-seleccionado">
-        <!--foto,nombre,clase,descripcion,bt votar candidato-->
-
-        <img draggable="false" src="/pagina/metro-exodus_4k_fondospantalla.jpg" alt=""
-            class="img-datos-candidato-votar">
-        <div class="text-nombre-datos-candidato-votar">Mateo González</div>
-        <div class="text-clase-datos-candidato-votar">4ºC</div>
-        <div class="text-descripcion-datos-candidato-votar"> Si no jugaste al Metro, Mafia, Borderlands y Dying Light
-            mejor vete. Se acerca el verano... y que significa... exacto...24/6 en el gym!!!!🃏
-        </div>
+        <img draggable="false" src="" alt="" class="img-datos-candidato-votar">
+        <div class="text-nombre-datos-candidato-votar"></div>
+        <div class="text-clase-datos-candidato-votar"></div>
+        <div class="text-descripcion-datos-candidato-votar"></div>
         <input type="button" value="Votar" class="bt-votar-datos-candidato-votar" onclick="">
         <!--bt pasar o retroceder a una categoria de voto-->
-        <img src="/pagina/assets/flecha_cambiar.svg" alt="" class="bt-cambiar-retroceder-categoria" onclick="">
-        <img src="/pagina/assets/flecha_cambiar.svg" alt="" class="bt-cambiar-siguiente-categoria" onclick="">
+        <img src="/pagina/assets/flecha_cambiar.svg" alt="" class="bt-cambiar-retroceder-categoria" onclick="categoria_anterior()">
+        <img src="/pagina/assets/flecha_cambiar.svg" alt="" class="bt-cambiar-siguiente-categoria" onclick="categoria_siguiente()">
     </div>
     <!--candidatos para votar-->
     <div id="alinear-div-candidatos-votar">
-        <!--dividido por clase ºAºCºB-->
-        <div class="div-clase-separacion-candidatos">
-            <h3 class="text-clase-candidatos-separacion">4ºA</h3>
-            <div class="div-candidato">
-                <img draggable="false" src="/pagina/metro-exodus_4k_fondospantalla.jpg" alt="" class="img-candidato">
-                <div class="nombre-candidato">Mateo Gonzalez</div>
-            </div>
-            <div class="div-candidato">
-                <img draggable="false" src="/pagina/metro-exodus_4k_fondospantalla.jpg" alt="" class="img-candidato">
-                <div class="nombre-candidato">Mateo Gonzalez</div>
-            </div>
-            <div class="div-candidato">
-                <img draggable="false" src="/pagina/metro-exodus_4k_fondospantalla.jpg" alt="" class="img-candidato">
-                <div class="nombre-candidato">Mateo Gonzalez</div>
-            </div>
-            
-
-        </div>
-        <div class="div-clase-separacion-candidatos">
-            <h3 class="text-clase-candidatos-separacion">4ºB</h3>
-            <div class="div-candidato">
-                <img draggable="false" src="/pagina/metro-exodus_4k_fondospantalla.jpg" alt="" class="img-candidato">
-                <div class="nombre-candidato">Mateo Gonzalez</div>
-            </div>
-        </div>
-        <div class="div-clase-separacion-candidatos">
-            <h3 class="text-clase-candidatos-separacion">4ºC</h3>
-            <div class="div-candidato">
-                <img draggable="false" src="/pagina/metro-exodus_4k_fondospantalla.jpg" alt="" class="img-candidato">
-                <div class="nombre-candidato">Mateo Gonzalez</div>
-            </div>
-        </div>
     </div>
 </body>
 

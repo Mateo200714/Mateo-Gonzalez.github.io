@@ -167,8 +167,8 @@ function abrir_cerra_introducir_codigo(realizar) {
 }
 
 //historial votaciones realizadas 
-function cerrar_historial_votos(){
-    document.getElementById("div-alinear-pagina-historial-votaciones").style.display="none"
+function cerrar_historial_votos() {
+    document.getElementById("div-alinear-pagina-historial-votaciones").style.display = "none"
 }
 function mostrar_historial_usuario_votaciones(historial_recibido, datos_participantes_recibido, categorias_votaciones_recibido) {
     //cerrar todas las pestañas
@@ -199,10 +199,7 @@ function mostrar_historial_usuario_votaciones(historial_recibido, datos_particip
     //mostrar resultados
     document.getElementById("div-text-resultados-historial").innerHTML = codigo_resultante
 }
-function continuar_historial_votacion(){
+function continuar_historial_votacion() {
     window.location.href = "/pagina/pagina_votar/pagina_votaciones.html";
 }
-//votar categorias
-function mostrar_votar_categoria(){
-    
-}
+
