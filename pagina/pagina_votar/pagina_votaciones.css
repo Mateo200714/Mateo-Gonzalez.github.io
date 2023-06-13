@@ -41,16 +41,22 @@ body {
     color: #eec935;
 }
 
-@keyframes typing{
-    from{width: 0;}
+@keyframes typing {
+    from {
+        width: 0;
+    }
 }
-@keyframes blink{
-    50%{border-color: transparent;}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
+
 .bt-cambiar-retroceder-categoria {
     position: absolute;
     top: calc(50% - 27px);
-    left: 0px;
+    left: 10px;
     height: 55px;
     width: 55px;
     cursor: pointer;
@@ -62,12 +68,28 @@ body {
     transform: rotate(180deg);
     position: absolute;
     top: calc(50% - 27px);
-    right: 0px;
+    right: 10px;
     height: 55px;
     width: 55px;
     cursor: pointer;
     fill: #313cdb;
     user-select: none;
+}
+
+@media(max-width:500px) {
+    .bt-cambiar-retroceder-categoria {
+        left: 2px;
+        top: calc(50% - 23px);
+        height: 47px;
+        width: 47px;
+    }
+
+    .bt-cambiar-siguiente-categoria {
+        right: 2px;
+        top: calc(50% - 23px);
+        height: 47px;
+        width: 47px;
+    }
 }
 
 /* bt votos */
@@ -106,11 +128,13 @@ body {
     color: #ff7e22;
     background-color: #94dfd2;
 }
+
 .no-seleccionado {
     border: 1px outset #14947d;
     color: #ffd24c;
     background-color: #10b597;
 }
+
 /* datos candidato */
 #alinear-div-datos-candidato-seleccionado {
     position: absolute;
@@ -132,6 +156,18 @@ body {
     box-shadow: 0px 0px 3px #9e9e9e;
 }
 
+@media(max-width:500px) {
+    .img-datos-candidato-votar {
+        width: 300px;
+    }
+}
+
+@media(max-width:400px) {
+    .img-datos-candidato-votar {
+        width: 250px;
+    }
+}
+
 .text-nombre-datos-candidato-votar {
     position: relative;
     margin-top: 10px;
@@ -145,7 +181,7 @@ body {
 .text-clase-datos-candidato-votar {
     position: relative;
     margin-top: 4px;
-    font-size: 19px;
+    font-size: 17.5px;
     font-weight: 600;
     letter-spacing: 0.6px;
     font-family: 'Noto Sans', sans-serif;
@@ -154,25 +190,31 @@ body {
 
 .text-descripcion-datos-candidato-votar {
     position: relative;
-    width: 450px;
+    width: 470px;
     height: 65px;
     text-align: center;
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 15.25px;
     font-weight: 500;
     letter-spacing: 0.55px;
     font-family: 'Noto Sans', sans-serif;
     color: #313cdb;
-    animation:typing 1s steps(12),
-    blink .65s infinite step-end alternate;
+    animation: typing 1s steps(12),
+        blink .65s infinite step-end alternate;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@media(max-width:500px) {
+    .text-descripcion-datos-candidato-votar {
+        width: calc(100% - 50px);
+    }
 }
 
 .bt-votar-datos-candidato-votar {
     transition: 1s;
     position: relative;
-    top: 5px;
+    top: 13px;
     width: 150px;
     height: 40px;
     display: flex;
@@ -190,7 +232,13 @@ body {
     user-select: none;
 }
 
-.bt-votar-datos-candidato-votar:focus {
+.bt-votar-datos-candidato-votar-no-votado {
+    border: 1px outset #4879e4;
+    color: #1fcab6;
+    background-color: #245cd3;
+}
+
+.bt-votar-datos-candidato-votar-votado {
     border: 1px inset #8eb9dc;
     color: #34a1bc;
     background-color: #d4ecff;
@@ -203,17 +251,19 @@ body {
     bottom: 0px;
     left: 0%;
     width: 100%;
-    height: calc(35% - 15px);
+    height: calc(35% - 40px);
     box-shadow: 0px 0px 3px #b8b8b8;
     overflow-x: hidden;
     overflow-y: auto;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 12px;
 }
 
 .text-candidatos-todos {
     transition: 0.8s;
     position: relative;
+    top: 7px;
     margin-top: 8px;
     margin: 0;
     width: 100%;
@@ -277,9 +327,7 @@ body {
     box-shadow: 0px 0px 3px #b1b1b1;
 }
 
-.div-candidato:hover {
-    box-shadow: 0px 0px 7px #989898;
-}
+
 
 .img-candidato {
     position: relative;
@@ -303,11 +351,17 @@ body {
     font-family: 'Noto Sans', sans-serif;
     color: #313cdb;
 }
-.seleccionado-candidato{
+
+.seleccionado-candidato {
     background-color: #ebffff;
-    box-shadow: 0px 0px 3px #ffcdcd;
+    box-shadow: 0px 0px 5px #b300cf;
 }
-.no-seleccionado-candidato{
+
+.no-seleccionado-candidato {
     background-color: #edf0f0;
     box-shadow: 0px 0px 3px #b1b1b1;
+}
+
+.no-seleccionado-candidato:hover {
+    box-shadow: 0px 0px 6px #989898;
 }
